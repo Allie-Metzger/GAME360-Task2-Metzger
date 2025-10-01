@@ -13,12 +13,16 @@ public class GameManager : MonoBehaviour
     public int score = 0;//score is calculated
     public int lives = 3;
     public int enemiesKilled = 0;
+    public GameObject coinPrefab, newCoin;
+    public float coinSpawnRate = 2f;
+    private float nextCoinTime =0f;
 
     [Header("UI References")]
     public TMP_Text scoreText;
     public TMP_Text livesText;
     public TMP_Text enemiesKilledText;
     public GameObject gameOverPanel;
+    public GameObject gameWonPanel;
     //public TMP_Text scoreText;
 
     private void Awake()
@@ -39,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         RefreshUIReferences();
         UpdateUI();
+        GenerateCoins();
 
     }
 
@@ -58,7 +63,25 @@ public class GameManager : MonoBehaviour
         score += points;
         Debug.Log($"Score increased by {points}. Total: {score}");
         UpdateUI();
-     }
+
+
+
+        if (score > 1000)
+            PlayerWon();
+    
+    
+        if (Time.time >= nextCoinTime)
+        {
+            GenerateCoins();
+    nextCoinTime = Time.time + coinSpawnRate;
+        }
+}
+
+public void PlayerWon()
+    { 
+        gameWonPanel.SetActive(true);
+        Time.timeScale = 0f; // Pause the game
+    }
 
     
     public void LoseLife()
@@ -133,6 +156,7 @@ public class GameManager : MonoBehaviour
 
         // Hide game over panel
         if (gameOverPanel) gameOverPanel.SetActive(false);
+        if (gameWonPanel) gameWonPanel.SetActive(false);
 
         // Destroy all enemies, bullets, and collectibles before reloading
         DestroyAllGameObjects();
@@ -141,6 +165,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void GenerateCoins()
+    {
+
+
+       // int randomIndex = Random.Range(0, spawnPoints.Length);
+        
+        newCoin=Instantiate(coinPrefab, transform.position, Quaternion.identity);
+        //newCoin.transform.position.x = (Random.Range(-8f, 8f), Random.Range(-2,4), transform.position.);
+        newCoin.transform.position = new Vector2(Random.Range(-8f, 8f), Random.Range(-2,4));
+
+
+            }
     private void DestroyAllGameObjects()
     {
         // Destroy all enemies

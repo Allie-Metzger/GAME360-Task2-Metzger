@@ -512,10 +512,14 @@ MonoBehaviour:
   score: 0
   lives: 3
   enemiesKilled: 0
+  coinPrefab: {fileID: 0}
+  newCoin: {fileID: 0}
+  coinSpawnRate: 2
   scoreText: {fileID: 0}
   livesText: {fileID: 0}
   enemiesKilledText: {fileID: 0}
   gameOverPanel: {fileID: 0}
+  gameWonPanel: {fileID: 0}
 --- !u!4 &654673864
 Transform:
   m_ObjectHideFlags: 0

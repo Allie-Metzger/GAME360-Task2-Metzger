@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
 
     [Header("Shooting")]
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefab, bulletPrefab1, bulletPrefab2;
     public Transform firePoint;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
@@ -63,14 +63,24 @@ public class PlayerController : MonoBehaviour
 
     private void FireBullet()
     {
-        if (GameManager.Instance.score > 400 && GameManager.Instance.score < 1000)
+        if (GameManager.Instance.score > 100 && GameManager.Instance.score < 300)
+        {
             fireRate = 0.3f;
-        if (GameManager.Instance.score > 900)
+            bulletPrefab = bulletPrefab1;
+
+        }
+
+        if (GameManager.Instance.score > 300)
+        {
             fireRate = 0.1f;
+            bulletPrefab = bulletPrefab2;
+        }
 
         if (bulletPrefab && firePoint)
         {
+            
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+           
         }
 
         // Play shoot sound effect
