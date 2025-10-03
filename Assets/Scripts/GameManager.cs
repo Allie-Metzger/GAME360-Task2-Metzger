@@ -39,24 +39,56 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         RefreshUIReferences();
         UpdateUI();
         GenerateCoins();
+    }
+
+    private void Start()
+    {
+       // RefreshUIReferences();
+       // UpdateUI();
+       // GenerateCoins();
 
     }
 
     private void RefreshUIReferences()
     {
-        if (scoreText == null)
-            scoreText = GameObject.Find("ScoreText")?.GetComponent<TMP_Text>();
-        if (livesText == null)
-            livesText = GameObject.Find("LivesText")?.GetComponent<TMP_Text>();
-        if (enemiesKilledText == null)
-            enemiesKilledText = GameObject.Find("EnemiesText")?.GetComponent<TMP_Text>();
-        if (gameOverPanel == null)
-            gameOverPanel = GameObject.Find("GameOverPanel");
+         scoreText = GameObject.Find("Score")?.GetComponent<TMP_Text>();
+         livesText = GameObject.Find("Lives")?.GetComponent <TMP_Text>();
+         enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<TMP_Text>();
+        gameOverPanel = GameObject.Find("GameEndPanel");
+        gameWonPanel = GameObject.Find("GameWonPanel");
+        if (gameOverPanel != null)
+        { 
+        gameOverPanel.SetActive(false);
+        }
+        if (gameWonPanel != null)
+        {
+            gameWonPanel.SetActive(false);
+        }
+       
+
+      //  if (scoreText == null)
+            //scoreText = GameObject.Find("ScoreText")?.GetComponent<TMP_Text>();
+       // if (livesText == null)
+          //  livesText = GameObject.Find("LivesText")?.GetComponent<TMP_Text>();
+       // if (enemiesKilledText == null)
+           // enemiesKilledText = GameObject.Find("EnemiesText")?.GetComponent<TMP_Text>();
+       // if (gameOverPanel == null)
+           // gameOverPanel = GameObject.Find("GameOverPanel");
     }
     public void AddScore(int points)
     {
@@ -83,7 +115,7 @@ public void PlayerWon()
         Time.timeScale = 0f; // Pause the game
     }
 
-    
+
     public void LoseLife()
     {
         lives--;
@@ -138,13 +170,6 @@ public void PlayerWon()
 
     public void RestartGame()
     {
-        /* score = 0;
-         lives = 3;
-         enemiesKilled = 0;
-         Time.timeScale = 1f;
-         if (gameOverPanel) gameOverPanel.SetActive(false);
-         UpdateUI();*/
-
 
         // CRITICAL: Unpause the game first!
         Time.timeScale = 1f;
@@ -153,13 +178,6 @@ public void PlayerWon()
         score = 0;
         lives = 3;
         enemiesKilled = 0;
-
-        // Hide game over panel
-        if (gameOverPanel) gameOverPanel.SetActive(false);
-        if (gameWonPanel) gameWonPanel.SetActive(false);
-
-        // Destroy all enemies, bullets, and collectibles before reloading
-        DestroyAllGameObjects();
 
         // Reload the current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
