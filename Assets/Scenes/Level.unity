@@ -789,6 +789,8 @@ MonoBehaviour:
   bulletPrefab2: {fileID: 8908126913601350669, guid: 2c7a01fb5e8f6434f83de9e1677e51a6, type: 3}
   firePoint: {fileID: 479401549}
   fireRate: 0.5
+  shootSound: {fileID: 8300000, guid: aa659eeaf7a850a41a19d990aa3355dc, type: 3}
+  CoinSound: {fileID: 8300000, guid: 3d16df54a64d949448af175ba9d65dea, type: 3}
 --- !u!212 &601836217
 SpriteRenderer:
   m_ObjectHideFlags: 0
