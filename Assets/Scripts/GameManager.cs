@@ -156,6 +156,16 @@ public void PlayerWon()
         Time.timeScale = 0f; // Pause the game
     }
 
+    public void PlayFirstLevel()
+    {
+        SceneManager.LoadScene("Level");
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void reloadGame()
     {
         //SceneManager.LoadScene("Delete");
