@@ -162,8 +162,8 @@ public void PlayerWon()
     }
 
     public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("StartMenu");
+    { 
+    SceneManager.LoadScene("StartMenu");
     }
 
     public void reloadGame()
@@ -190,7 +190,7 @@ public void PlayerWon()
         enemiesKilled = 0;
 
         // Reload the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Level");
     }
 
     public void GenerateCoins()
