@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         RefreshUIReferences();
         UpdateUI();
-        GenerateCoins();
+       
     }
 
     private void Start()
