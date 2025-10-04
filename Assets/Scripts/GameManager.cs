@@ -158,7 +158,9 @@ public void PlayerWon()
 
     public void PlayFirstLevel()
     {
+        OnEnable();
         SceneManager.LoadScene("Level");
+        
     }
 
     public void GoToMainMenu()
@@ -188,9 +190,9 @@ public void PlayerWon()
         score = 0;
         lives = 3;
         enemiesKilled = 0;
-
+        //SceneManager.sceneLoaded -= OnSceneLoaded;
         // Reload the current scene
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void GenerateCoins()
