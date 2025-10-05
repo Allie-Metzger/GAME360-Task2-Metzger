@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Stats")]
     public int score = 0;//score is calculated
-    public int lives = 3;
+    public int lives = 1;
     public int enemiesKilled = 0;
     public GameObject coinPrefab, newCoin;
     public float coinSpawnRate = 2f;
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
 
 
 
-        if (score > 1000)
+        if (score > 50000)
             PlayerWon();
     
     
@@ -188,7 +188,7 @@ public void PlayerWon()
 
         // Reset all game state
         score = 0;
-        lives = 3;
+        lives = 1;
         enemiesKilled = 0;
         //SceneManager.sceneLoaded -= OnSceneLoaded;
         // Reload the current scene
