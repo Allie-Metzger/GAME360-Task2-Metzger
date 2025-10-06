@@ -188,7 +188,7 @@ public void PlayerWon()
 
         // Reset all game state
         score = 0;
-        lives = 1;
+        lives = 2;
         enemiesKilled = 0;
         //SceneManager.sceneLoaded -= OnSceneLoaded;
         // Reload the current scene
