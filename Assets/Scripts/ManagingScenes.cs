@@ -2,25 +2,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ManagingScenes : MonoBehaviour
+namespace GAME360Project.Assets.Scripts
 {
 
-    public static ManagingScenes Instance { get; private set; }
-
-    public void PlayFirstLevel()
-
+    public class ManagingScenes : MonoBehaviour
     {
-        SceneManager.LoadScene("Level");
-    }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
+        public static ManagingScenes Instance { get; private set; }
 
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("StartMenu");
+        public void PlayFirstLevel()
 
+        {
+            SceneManager.LoadScene("Level");
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
+        }
+
+        public void GoToMainMenu()
+        {
+            SceneManager.LoadScene("StartMenu");
+
+        }
     }
 }
