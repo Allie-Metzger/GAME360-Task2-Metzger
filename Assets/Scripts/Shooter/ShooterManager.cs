@@ -100,7 +100,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
 
 
 
-            if (score > 50000)
+            if (score > 100)
                 PlayerWon();
     
     

@@ -26,5 +26,12 @@ namespace GAME360Project.Assets.Scripts
             SceneManager.LoadScene("StartMenu");
 
         }
+
+        public void Continue()
+        {
+            // Get the current scene's build index
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        }
     }
 }

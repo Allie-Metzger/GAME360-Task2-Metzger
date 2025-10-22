@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -147,5 +148,12 @@ public class UIManager : MonoBehaviour
     public int GetCoinCount()
     {
         return coinCount;
+    }
+
+    public void Continue()
+    {
+        // Get the current scene's build index
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
