@@ -58,10 +58,10 @@ public class GameManager : MonoBehaviour
         }
 
         // Restart input
-        if (!isGameActive && Input.GetKeyDown(KeyCode.R))
+        /*if (!isGameActive && Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
-        }
+        }*/
     }
 
     void InitializeGame()
