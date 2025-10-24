@@ -130,9 +130,9 @@ GameObject:
   - component: {fileID: 307337115}
   - component: {fileID: 307337114}
   - component: {fileID: 307337113}
-  - component: {fileID: 307337118}
   - component: {fileID: 307337117}
   - component: {fileID: 307337116}
+  - component: {fileID: 307337118}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -320,11 +320,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 307337112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e040c68f16d924fa5f9481b1b99072, type: 3}
+  m_Script: {fileID: 11500000, guid: 28fd79f009b6f184e99c37627770f5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   jumpForce: 10
+  canDoubleJump: 0
+  doubleJumpForce: 8
   bulletPrefab: {fileID: 2265039565573289064, guid: 9f37fe52d4fca974b811f0858b62ccd8, type: 3}
   firePoint: {fileID: 707592897}
   groundCheck: {fileID: 954734224}
