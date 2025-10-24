@@ -49,6 +49,7 @@ public class Collectible : MonoBehaviour
         }
 
         EventManager.TriggerEvent("OnCoinCollected", scoreValue);
+        AudioManager.Instance.PlayCoinSound();
 
         if (AudioManager.Instance != null && collectSound != null)
         {
