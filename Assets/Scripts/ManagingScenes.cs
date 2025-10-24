@@ -27,6 +27,11 @@ namespace GAME360Project.Assets.Scripts
 
         }
 
+        public void GoToCredits()
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
         public void Continue()
         {
             // Get the current scene's build index

@@ -180,4 +180,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GAME360Project.Assets.Scripts.Shooter.Enemy
   health: 1
   moveSpeed: 2
-  detectionRange: 5
+  detectionRange: 20
