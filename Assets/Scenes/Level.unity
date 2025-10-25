@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 477450159}
   - component: {fileID: 477450158}
   m_Layer: 5
-  m_Name: EnemiesKilled
+  m_Name: Customers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,14 +887,14 @@ RectTransform:
   m_GameObject: {fileID: 477450156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4070336, y: 2.4390242, z: 1}
+  m_LocalScale: {x: 0.34494373, y: 1.3042908, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1780896841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.8140869, y: -16.097565}
+  m_AnchoredPosition: {x: 0.6899414, y: 23.339966}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477450158
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemies Killed
+  m_text: 'Customers Served: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3076,7 +3076,8 @@ MonoBehaviour:
   coinSpawnRate: 2
   scoreText: {fileID: 300046045}
   livesText: {fileID: 136571470}
-  enemiesKilledText: {fileID: 477450158}
+  enemiesKilledText: {fileID: 0}
+  customersText: {fileID: 477450158}
   gameOverPanel: {fileID: 1004199022}
   gameWonPanel: {fileID: 1366336850}
 --- !u!1 &1413075168
@@ -4050,7 +4051,7 @@ RectTransform:
   m_GameObject: {fileID: 1780896840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6106362, y: 1.0879892, z: 1}
+  m_LocalScale: {x: 4.2605505, y: 2.03454, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 477450157}
@@ -4058,7 +4059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 746, y: 416}
+  m_AnchoredPosition: {x: 746, y: 351}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1780896842
