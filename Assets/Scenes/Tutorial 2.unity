@@ -597,8 +597,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "                 Wow! You're a natural at this! \n              The customers
-    are  very pleased.\n\nOh no! We're completely out of sprinkles now! Could you
-    go and get some more?"
+    are  very pleased.\n\nOh no! We're completely out of coins for the register!
+    Could you go out and get some more?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
   m_sharedMaterial: {fileID: -1848693861386462764, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
