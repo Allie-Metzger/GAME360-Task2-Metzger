@@ -970,8 +970,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1002560488}
-        m_TargetAssemblyTypeName: ManagingScenes, Assembly-CSharp
-        m_MethodName: PlayFirstLevel
+        m_TargetAssemblyTypeName: GAME360Project.Assets.Scripts.ManagingScenes, Assembly-CSharp
+        m_MethodName: PlayFirstTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,10 +10,10 @@ namespace GAME360Project.Assets.Scripts
 
         public static ManagingScenes Instance { get; private set; }
 
-        public void PlayFirstLevel()
+        public void PlayFirstTutorial()
 
         {
-            SceneManager.LoadScene("Level");
+            SceneManager.LoadScene("Tutorial 1");
         }
 
         public void Quit()
