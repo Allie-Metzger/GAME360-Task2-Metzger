@@ -23,7 +23,6 @@ namespace GAME360Project.Assets.Scripts.Shooter
         public TMP_Text scoreText;
         public TMP_Text livesText;
         public TMP_Text enemiesKilledText;
-        public TMP_Text customersText;
         public GameObject gameOverPanel;
         public GameObject gameWonPanel;
         //public TMP_Text scoreText;
@@ -72,7 +71,6 @@ namespace GAME360Project.Assets.Scripts.Shooter
              scoreText = GameObject.Find("Score")?.GetComponent<TMP_Text>();
              livesText = GameObject.Find("Lives")?.GetComponent <TMP_Text>();
              enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<TMP_Text>();
-             customersText = GameObject.Find("Customers")?.GetComponent<TMP_Text>();
             gameOverPanel = GameObject.Find("GameEndPanel");
             gameWonPanel = GameObject.Find("GameWonPanel");
             if (gameOverPanel != null)
@@ -151,7 +149,6 @@ namespace GAME360Project.Assets.Scripts.Shooter
             if (scoreText) scoreText.text = "Score: " + score;
             if (livesText) livesText.text = "Lives: " + lives;
             if (enemiesKilledText) enemiesKilledText.text = "Enemies: " + enemiesKilled;
-            if (customersText) customersText.text = "Customers Served:" + enemiesKilled;
         }
 
         private void GameOver()
