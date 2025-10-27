@@ -1,24 +1,44 @@
-# Task2: Singleton
+# Task 3: Complete Patterns Integration
 
-## Student Info
-- Name: C. Allie Metzger
-- ID: 01219518
+# Project Evolution
+# Task 2 Foundation
+- Singleton Pattern: GameManager, AudioManager
+- Basic game with centralized management
 
-## Pattern: Singleton
-### Implementation
-To implement the Singleton pattern, I created a GameManager. The GameManager is mostly the same code as what was provided to us in the course through Canvas, but with a few changes. The first big change from the initial script was the addition of randomly generated coins. The second change was that once a player hits a certain score and thus changes the fire rate, a different bullet image is fired. This is an example of a Singleton pattern because all of the core gameplay loops are contained within the one GameManager script. This also includes things like managing the score, lives, and enemies killed updates.
+## Task 3 Additions
+## Observer Pattern
+- EventManager for decoupled communication
+- Events implemented: 
+OnPlayerStateChanged
+OnDoubleJump
+OnScoreChanged
+OnGameOver
+OnLevelComplete
+OnCoinCollected
 
-## Game Description
-- Title: We All Scream for Ice Cream!
+- Observers: UIManager, Achievements
+
+## State Machine Pattern
+- Player States: Idle, Run, Jump
+- Game States: Enhanced from Task 2
+- State transitions: When WASD is pressed, the player moves into the moving state. When the space bar is pressed, the player moves into the jumping state. When no inputs are detected, the player is idle.
+
+### Key Integration Points
+1. Score System: Singleton → Observer → UI
+2. Player Actions: Input → State → Event → Audio
+3. Game Flow: GameState → Events → Scene Changes
+
+## Repository Statistics
+- Total Commits: 56
+- Task 3 Commits: 28
+- Lines of Code: ~ 1150
+- Development Time: 40
+
+## How to Play
 - Controls: 
-W: Move up
-A: Move down
-S: Move left
-D: Move right
-Left Click: Shoot
+WASD to move
+F to fire
+Space to jump (Space again to double jump if permitted)
 
-- Objective: Achieve 50,000 "score"
-
-## Repository Stats
-- Total Commits: 28 (including this one)
-- Development Time: 15 hours
+- Objective: Complete Level 4
+- New Features: Double Jump
