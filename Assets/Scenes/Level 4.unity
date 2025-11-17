@@ -509,8 +509,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1730667609984612100, guid: e4b38b58edf3bdd48bab7a3bfa81a652, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -886,8 +886,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1486,8 +1486,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1730667609984612100, guid: e4b38b58edf3bdd48bab7a3bfa81a652, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1601,8 +1601,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2655,6 +2655,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 858050053955640363, guid: d6ee4ff9962f81a4ba3160e9f17832c1, type: 3}
+      propertyPath: m_Name
+      value: RedGroundTiles
+      objectReference: {fileID: 0}
     - target: {fileID: 1327063965789271203, guid: d6ee4ff9962f81a4ba3160e9f17832c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.7
@@ -2694,10 +2698,6 @@ PrefabInstance:
     - target: {fileID: 1327063965789271203, guid: d6ee4ff9962f81a4ba3160e9f17832c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 858050053955640363, guid: d6ee4ff9962f81a4ba3160e9f17832c1, type: 3}
-      propertyPath: m_Name
-      value: RedGroundTiles
       objectReference: {fileID: 0}
     - target: {fileID: 8489426453606159389, guid: a275e487cc011354bbce3ce1f6dea6fe, type: 3}
       propertyPath: m_Size.x
