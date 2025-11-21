@@ -1,93 +1,4 @@
-﻿/*using UnityEngine;
-
-public class PlayerController : MonoBehaviour
-{
-    [Header("Movement")]
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-
-    [Header("Combat")]
-    public GameObject bulletPrefab;
-    public Transform firePoint;
-
-    [Header("Ground Check")]
-    public Transform groundCheck;
-    public LayerMask groundLayer;
-
-    [Header("Components")]
-    public Rigidbody2D rb;
-    public Animator animator;
-    public SpriteRenderer spriteRenderer;
-
-    private PlayerState currentState;
-
-    void Start()
-    {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-        if (animator == null) animator = GetComponent<Animator>();
-        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-
-        ChangeState(new IdleState());
-    }
-
-    void Update()
-    {
-        // NEW: Only update if game is not paused
-        if (GameManager.Instance != null && GameManager.Instance.IsPaused())
-        {
-            return; // Skip all input when paused
-        }
-
-        if (currentState != null)
-        {
-            currentState.UpdateState(this);
-        }
-    }
-
-    public void ChangeState(PlayerState newState)
-    {
-        if (currentState != null)
-        {
-            currentState.ExitState(this);
-        }
-
-        currentState = newState;
-        currentState.EnterState(this);
-
-        EventManager.TriggerEvent("OnPlayerStateChanged", currentState.GetStateName());
-    }
-
-    public bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    public void Fire()
-    {
-        if (bulletPrefab != null && firePoint != null)
-        {
-            Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-            AudioManager.Instance.PlayShootSound();
-        }
-    }
-
-    public void TakeDamage()
-    {
-        GameManager.Instance.PlayerDied();
-        Respawn();
-    }
-
-    void Respawn()
-    {
-        transform.position = GameManager.Instance.spawnPoint;
-        ChangeState(new IdleState());
-    }
-
-    public string GetCurrentStateName()
-    {
-        return currentState != null ? currentState.GetStateName() : "None";
-    }
-}*/
+﻿
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -95,6 +6,14 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+
+    [Header("Dash")]
+    public bool canDash = true;
+    public float dashSpeed = 20f;
+    public float defaultGravity;
+    public float dashDuration = 0.2f;
+    public float defaultGravityScale;
+    public KeyCode dashKey = KeyCode.LeftShift;
 
     [Header("Double Jump")]
     public bool canDoubleJump = true;
@@ -115,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     private PlayerState currentState;
+    public float horizontal;
+
 
     void Start()
     {
@@ -127,6 +48,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("=== DOUBLE JUMP SETUP ===");
         Debug.Log("Can Double Jump: " + canDoubleJump);
         Debug.Log("Jumps Remaining: " + jumpsRemaining);
+        float horizontal = Input.GetAxis("Horizontal");
+        defaultGravity = rb.gravityScale;
     }
 
     void Update()
@@ -144,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
             if (oldJumps != jumpsRemaining)
             {
-                Debug.Log("🔄 Jumps Reset: " + jumpsRemaining + " (Grounded)");
+                Debug.Log("Jumps Reset: " + jumpsRemaining + " (Grounded)");
             }
         }
 
@@ -152,7 +75,23 @@ public class PlayerController : MonoBehaviour
         {
             currentState.UpdateState(this);
         }
+        if (Input.GetKeyDown(dashKey) && canDash)
+        {
+            ChangeState(new DashState());
+        }
+
     }
+
+    public void PerformDash()
+    {
+        if (!canDash)
+        {
+            return;
+        }
+        ChangeState(new DashState());
+    }
+
+
 
     public void ChangeState(PlayerState newState)
     {
@@ -224,6 +163,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+   
+
     public void TakeDamage()
     {
         GameManager.Instance.PlayerDied();
@@ -235,6 +176,7 @@ public class PlayerController : MonoBehaviour
         transform.position = GameManager.Instance.spawnPoint;
         jumpsRemaining = canDoubleJump ? 2 : 1;
         ChangeState(new IdleState());
+        rb.linearVelocity = Vector2.zero;
     }
 
     public string GetCurrentStateName()

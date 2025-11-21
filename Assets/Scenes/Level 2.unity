@@ -320,11 +320,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 307337112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fd79f009b6f184e99c37627770f5cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d77665b9b486e45ae58133a8b21d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   jumpForce: 10
+  canDash: 0
+  dashSpeed: 20
+  defaultGravity: 0
+  dashDuration: 0.2
+  defaultGravityScale: 0
+  dashKey: 304
   canDoubleJump: 0
   doubleJumpForce: 8
   bulletPrefab: {fileID: 2265039565573289064, guid: 9f37fe52d4fca974b811f0858b62ccd8, type: 3}
@@ -336,6 +342,7 @@ MonoBehaviour:
   rb: {fileID: 307337117}
   animator: {fileID: 307337113}
   spriteRenderer: {fileID: 307337114}
+  horizontal: 0
 --- !u!1 &435243043
 GameObject:
   m_ObjectHideFlags: 0
