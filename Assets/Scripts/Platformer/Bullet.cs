@@ -31,5 +31,15 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.CompareTag("Boss"))
+        {
+            HealthController healthController = collision.GetComponent<HealthController>();
+            if (healthController != null)
+            {
+                healthController.TakeDamage(1);
+                Debug.Log($"Boss took 1 damage. Boss has {healthController.currentHealth} left");
+            }
+        }
     }
 }

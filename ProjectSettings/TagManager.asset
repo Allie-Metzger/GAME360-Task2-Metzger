@@ -9,6 +9,8 @@ TagManager:
   - Collectible
   - Bullet
   - Ground
+  - Goal
+  - Boss
   layers:
   - Default
   - TransparentFX
