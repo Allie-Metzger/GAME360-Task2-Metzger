@@ -13,6 +13,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
 
         [Header("Game Stats")]
         public int score = 0;//score is calculated
+        public int scoreNeeded = 100;
         public int lives = 1;
         public int enemiesKilled = 0;
         public GameObject coinPrefab, newCoin;
@@ -53,6 +54,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            Time.timeScale = 1f;
             RefreshUIReferences();
             UpdateUI();
        
@@ -100,7 +102,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
 
 
 
-            if (score > 100)
+            if (score >= scoreNeeded)
                 PlayerWon();
     
     
