@@ -596,16 +596,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '              So, I have good news and bad news.
-
-
-    The good news is
-    that we made a lot of money today. The issue is that because of that, we''re
-    out of supplies.
-
-
-    No more making more ice cream cones for today. Maybe just
-    collect some more coins?'
+  m_text: "Great job! Let's go back and make some more ice cream cones. \n\nJust
+    be warned though, the customers want EVEN MORE than last time!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
   m_sharedMaterial: {fileID: -1848693861386462764, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
