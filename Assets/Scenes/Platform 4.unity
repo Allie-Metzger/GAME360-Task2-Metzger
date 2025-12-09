@@ -2377,11 +2377,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 1728537906}
   sfxSource: {fileID: 1728537905}
-  jumpSound: {fileID: 8300000, guid: 1ab6e9f2e78df6f49b4f2a418b5075b5, type: 3}
+  jumpSound: {fileID: 8300000, guid: ca6236a426e25884f961f58060777c92, type: 3}
   shootSound: {fileID: 8300000, guid: 0bc454d438b496e4ebe63c4bb941c9d8, type: 3}
   enemyDefeatedSound: {fileID: 8300000, guid: d24ec01712205a94bbe97686f537ff78, type: 3}
   powerUpSound: {fileID: 0}
-  coinSound: {fileID: 8300000, guid: 3d16df54a64d949448af175ba9d65dea, type: 3}
+  coinSound: {fileID: 8300000, guid: 1640c5bb28802324182a2d62791d7b37, type: 3}
 --- !u!114 &1728537903
 MonoBehaviour:
   m_ObjectHideFlags: 0
