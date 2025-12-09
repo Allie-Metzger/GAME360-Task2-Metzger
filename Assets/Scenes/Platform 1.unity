@@ -325,13 +325,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   jumpForce: 10
-  canDash: 0
+  canDash: 1
   dashSpeed: 20
   defaultGravity: 0
   dashDuration: 0.2
   defaultGravityScale: 0
   dashKey: 304
-  canDoubleJump: 0
+  canDoubleJump: 1
   doubleJumpForce: 8
   bulletPrefab: {fileID: 2265039565573289064, guid: 9f37fe52d4fca974b811f0858b62ccd8, type: 3}
   firePoint: {fileID: 707592897}
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   spawnPoint: {x: -8, y: 0, z: 0}
-  levelTimeLimit: 10
+  levelTimeLimit: 30
 --- !u!4 &1728537904
 Transform:
   m_ObjectHideFlags: 0
