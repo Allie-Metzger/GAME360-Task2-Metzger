@@ -54,6 +54,9 @@ namespace GAME360Project.Assets.Scripts.Shooter
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            score = 0;
+            lives = 2;
+            enemiesKilled = 0;
             Time.timeScale = 1f;
             RefreshUIReferences();
             UpdateUI();
@@ -207,7 +210,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
         
             newCoin=Instantiate(coinPrefab, transform.position, Quaternion.identity);
             //newCoin.transform.position.x = (Random.Range(-8f, 8f), Random.Range(-2,4), transform.position.);
-            newCoin.transform.position = new Vector2(Random.Range(-8f, 8f), Random.Range(-2,4));
+            newCoin.transform.position = new Vector2(Random.Range(-8f, 8f), Random.Range(-2,2));
 
 
                 }
