@@ -602,8 +602,7 @@ MonoBehaviour:
 
 
     Go back to The Parlor and play as much as you
-    want. There''s a twist though. Instead of you handling the cones, you''ll be
-    handling the ice cream instead! Have fun~'
+    want. Have fun~'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
   m_sharedMaterial: {fileID: -1848693861386462764, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}

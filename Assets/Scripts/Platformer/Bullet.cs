@@ -40,6 +40,7 @@ public class Bullet : MonoBehaviour
                 healthController.TakeDamage(1);
                 Debug.Log($"Boss took 1 damage. Boss has {healthController.currentHealth} left");
             }
+            Destroy(gameObject) ;
         }
     }
 }
