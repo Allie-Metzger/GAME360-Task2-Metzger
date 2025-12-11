@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 300046046}
   - component: {fileID: 300046045}
   m_Layer: 5
-  m_Name: Score
+  m_Name: EnemiesKilled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -478,14 +478,14 @@ RectTransform:
   m_GameObject: {fileID: 300046043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.59072316, y: 0.8540119, z: 0.6329915}
+  m_LocalScale: {x: 0.36034113, y: 0.49651852, z: 0.6329915}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2012281211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.850952, y: 23.333649}
+  m_AnchoredPosition: {x: -30.3, y: 24.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300046045
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score
+  m_text: Enemies Killed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
   m_sharedMaterial: {fileID: -1848693861386462764, guid: 932974c99ddf75f40afbf65879fa09a1, type: 2}
@@ -535,8 +535,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1296,8 +1296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GAME360Project.Assets.Scripts.Shooter.PlayerController
   moveSpeed: 5
   bulletPrefab: {fileID: 6339858543439966721, guid: 3456f03b27c08bf408eecca441db900d, type: 3}
-  bulletPrefab1: {fileID: 8563878438489036709, guid: 79596dac042f54043b0940b77b7328d0, type: 3}
-  bulletPrefab2: {fileID: 8908126913601350669, guid: 2c7a01fb5e8f6434f83de9e1677e51a6, type: 3}
+  bulletPrefab1: {fileID: 6339858543439966721, guid: 3456f03b27c08bf408eecca441db900d, type: 3}
+  bulletPrefab2: {fileID: 6339858543439966721, guid: 3456f03b27c08bf408eecca441db900d, type: 3}
   firePoint: {fileID: 479401549}
   fireRate: 0.5
   shootSound: {fileID: 8300000, guid: aa659eeaf7a850a41a19d990aa3355dc, type: 3}
@@ -2796,15 +2796,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GAME360Project.Assets.Scripts.Shooter.ShooterManager
   score: 0
-  scoreNeeded: 2147483647
+  scoreNeeded: 5000
   lives: 1
   enemiesKilled: 0
-  coinPrefab: {fileID: 5312309063304280836, guid: 17bac6fd2586d3d4bbb4bbfdb26a4bbf, type: 3}
+  enemyScore: 0
+  coinPrefab: {fileID: 5312309063304280836, guid: 726116128e3cbe64c9ecd1a52da503ff, type: 3}
   newCoin: {fileID: 0}
   coinSpawnRate: 2
-  scoreText: {fileID: 300046045}
+  scoreText: {fileID: 0}
   livesText: {fileID: 136571470}
-  enemiesKilledText: {fileID: 0}
+  enemiesKilledText: {fileID: 300046045}
   gameOverPanel: {fileID: 1004199022}
   gameWonPanel: {fileID: 1366336850}
 --- !u!1 &1413075168
@@ -4127,7 +4128,7 @@ GameObject:
   - component: {fileID: 2012281213}
   - component: {fileID: 2012281212}
   m_Layer: 5
-  m_Name: Score Background
+  m_Name: Enemies Killed BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4142,7 +4143,7 @@ RectTransform:
   m_GameObject: {fileID: 2012281210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2345493, y: 2.1428275, z: 1.5798}
+  m_LocalScale: {x: 2.2345493, y: 1.6585485, z: 1.5798}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 300046044}
@@ -4150,7 +4151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -826, y: 417}
+  m_AnchoredPosition: {x: -700, y: 440}
   m_SizeDelta: {x: 187.7, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012281212

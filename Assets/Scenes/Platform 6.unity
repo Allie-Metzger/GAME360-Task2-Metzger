@@ -528,7 +528,7 @@ MonoBehaviour:
   defaultGravityScale: 0
   dashKey: 304
   canDoubleJump: 1
-  doubleJumpForce: 8
+  doubleJumpForce: 10
   bulletPrefab: {fileID: 2265039565573289064, guid: 9f37fe52d4fca974b811f0858b62ccd8, type: 3}
   firePoint: {fileID: 707592897}
   groundCheck: {fileID: 954734224}

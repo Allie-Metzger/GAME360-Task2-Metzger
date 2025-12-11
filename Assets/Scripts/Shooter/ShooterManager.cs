@@ -16,6 +16,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
         public int scoreNeeded = 100;
         public int lives = 1;
         public int enemiesKilled = 0;
+        public int enemyScore = 100;
         public GameObject coinPrefab, newCoin;
         public float coinSpawnRate = 2f;
         private float nextCoinTime =0f;
@@ -138,7 +139,7 @@ namespace GAME360Project.Assets.Scripts.Shooter
         public void EnemyKilled()
         {
             enemiesKilled++;
-            AddScore(100); // 100 points per enemy
+            AddScore(enemyScore); // points per enemy
             Debug.Log($"Enemy killed! Total enemies defeated: {enemiesKilled}");
         }
 
